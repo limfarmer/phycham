@@ -1,3 +1,5 @@
+from builtins import str
+
 name = "임정후"  # 파이썬은 데이터형이 없기 때문에 값이 대입될 때 결정됨
 age = 31
 gender = '남성'
@@ -21,3 +23,15 @@ print("이름 : {} {}".format(name,addr))
 print("=" * 5, "파이썬 현재 스타일", "=" * 5, sep="")
 print(f"이름 : {name}")
 print(f"성별 : {gender}, 직업 : {jobs}, 나이 : {age}")
+
+# 자바 스타일 : 연산자 사용
+print("=" * 5, "자바 스타일", "=" * 5, sep="")
+print("이름 : " + name)
+print("나이 : " + str(age)) # 파이썬에서는 + 사용시 문자열로 변경해서 출력해애함
+print("성별 : " + gender)
+print("주소 : " + addr)
+
+# 출력 시 정렬
+
+
+

@@ -14,7 +14,7 @@ print("주소 : %s" % addr)
 
 # 파이썬 3.6 이전 스타일
 print("=" * 5, "3.6 이전 스타일", "=" * 5, sep="")
-print("이름 : {}".format(name))
+print("이름 : {}".format(name)) #
 print("이름 : {} {}".format(name,addr))
 
 # 파이썬 현재 스타일

@@ -46,22 +46,50 @@
 # print(sum(score)/len(score))
 
 # 중복 제거
-my_list = ['a','p','p','l','e','a','A']
-new_list =[]
-for e in my_list:
-    if e not in new_list:
-        new_list += e # new_list.append(e)도 가능
-print(new_list)
+# my_list = ['a','p','p','l','e','a','A']
+# new_list =[]
+# for e in my_list:
+#     if e not in new_list:
+#         new_list += e # new_list.append(e)도 가능
+# print(new_list)
 
 # 리스트 순회하기
-for e in my_list:
-    print(e, end=" ")
+# for e in my_list:
+#     print(e, end=" ")
 
 # 리스트 순회 전통적인 방법
-print()
-for i in range(len(my_list)):
-    print(my_list[i], end=" ")
+# print()
+# for i in range(len(my_list)):
+#     print(my_list[i], end=" ")
 
+#연습 문제
 # 1 ~ 45까지의 로또 번호 6개를 자동 생성하기
+import random
+rs = []
+#for e in range(6):
+while True:
+    print(rs) # 중복된 값이 나올경우 같은 내용이 두번찍힘
+    rand = random.randrange(1,46)
+    if rand not in rs:
+        rs.append(rand)
+    if len(rs) == 6: break
+print("결과 : ", rs)
+
+
+# 임의의 수를 연속(공백)으로 입력 받아 홀수, 짝수 리스트로 나누어 담기
+# ex) 1,2,3,4,5,6,7,8,9,10
+# 홀수 1,3,5,7,9 / 짝수 2,4,6,8,10 라고 list에 담아서 찍기
+# number = list(map(int,input("임의의 수 :").split()))
+# 짝수 = []
+# 홀수 = []
+# for i in range(len(number)):
+#     if number[i] != 0:
+#         if number[i] % 2 == 0:
+#             #print("짝수 : ", {number[i]},end=",")
+#             짝수.append(number[i])
+#         else:
+#             #print("홀수 : ", {number[i]},end=",")
+#             홀수.append(number[i])
+# print(f"홀수 : {홀수} 짝수 : {짝수}")
 
 

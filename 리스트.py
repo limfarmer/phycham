@@ -65,15 +65,15 @@
 #연습 문제
 # 1 ~ 45까지의 로또 번호 6개를 자동 생성하기
 import random
-rs = []
-#for e in range(6):
-while True:
-    print(rs) # 중복된 값이 나올경우 같은 내용이 두번찍힘
-    rand = random.randrange(1,46)
-    if rand not in rs:
-        rs.append(rand)
-    if len(rs) == 6: break
-print("결과 : ", rs)
+# rs = []
+# #for e in range(6):
+# while True:
+#     print(rs) # 중복된 값이 나올경우 같은 내용이 두번찍힘
+#     rand = random.randrange(1,46)
+#     if rand not in rs:
+#         rs.append(rand)
+#     if len(rs) == 6: break
+# print("결과 : ", rs)
 
 
 # 임의의 수를 연속(공백)으로 입력 받아 홀수, 짝수 리스트로 나누어 담기
@@ -91,5 +91,9 @@ print("결과 : ", rs)
 #             #print("홀수 : ", {number[i]},end=",")
 #             홀수.append(number[i])
 # print(f"홀수 : {홀수} 짝수 : {짝수}")
+
+#random.sample(범위,길이) 사용시
+print(random.sample(range(1, 46), 6))
+
 
 

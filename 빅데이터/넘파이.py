@@ -75,3 +75,81 @@ print(a15)
 # 지정한 범위에 해당하는 정수로 난수 배열을 생성
 a16 = np.random.randint(10,size=(3,4))
 print(a16)
+
+# 배열의 연산 : 배열의 다향한 연산을 할 수 있음 단, 배열의 형태가 같아야함
+arr1 = np.array([1,2,3])
+arr2 = np.array([4,5,6])
+print(arr1 + arr2)
+print(arr1 - arr2)
+print(arr1 * arr2)
+print(arr1 / arr2)
+
+# 요소별 비교 연산
+arr3 = np.array([10,20,30,40,50])
+print(arr3 > 20)
+
+# 통계를 위한 연산 : 배열의 힙, 표준 편차, 분산, 최대값과 최소값, 누적합, 누적곱 등
+# 통계에서 많이 사용하는 메소드를 제공해줌
+arr4 = np.arange(5) # 0 ~ 5 미만의 값 생성
+print(arr4)
+print(f"합계 : {arr4.sum()}")
+print(f"평균 : {arr4.mean()}")
+print(f"표준 편차 : {arr4.std()}")
+print(f"분산 : {arr4.var()}")
+print(f"최소값 : {arr4.min()}")
+print(f"최대값 : {arr4.max()}")
+
+# 배열의 인덱싱 / 슬라이싱 
+arr5 = np.array([1,2,3,4,5])
+#인덱싱
+print(arr5[3]) # 네번째 요소
+# 슬라이싱
+print(arr5[:4]) # 0번째 인덱스부터 4번 인덱스 미만까지 값을 잘라냄
+
+# Universal 함수 : 배열의 원소별 연산을 지원하는 함수
+arr6 = np.array([1,2,3,4,5])
+arr7 = np.arange(6,11)
+print(arr6)
+print(arr7)
+print(f"add : {np.add(arr6, arr7)}")
+print(f"sub : {np.subtract(arr6, arr7)}")
+print(f"mul : {np.multiply(arr6, arr7)}")
+print(f"div : {np.divide(arr7, arr6)}")
+print(f"pow : {np.power(arr6, arr7)}") # 제곱
+
+# 행렬 연산 : 행렬간의 연산, 다차원 배열
+matrix1= np.array([[1,2],[3,4]])
+matrix2= np.array([[5,6],[7,8]])
+
+# 행렬 덧셈
+print("------ 다차원 행렬 산수 ---------")
+print(np.add(matrix1,matrix2))
+print(np.subtract(matrix1,matrix2))
+print(np.multiply(matrix1,matrix2))
+
+# 전치 행렬 : 행과 열을 교환하여 얻어진 행렬
+matrix3 = np.array([[1,2],[3,4]])
+result = np.transpose(matrix3)
+print(result)
+
+# 역 행렬
+matrix4 = np.array([[1,2],[3,4]])
+inverse_matrix = np.linalg.inv(matrix4)
+print(inverse_matrix)
+
+# 정렬과 탐색
+x_sort = np.array([9,8,7,12,13,2,1,5])
+print(np.amin(x_sort))
+print(np.amax(x_sort))
+print(np.argmin(x_sort)) # 최소값이 있는 위치
+print(np.argmax(x_sort)) # 최대값이 있는 위치
+print(np.sort(x_sort)) # 오름차순 정렬
+print(np.argsort(x_sort)) # 값의 인덱스
+
+# 브로드 캐스트 : 배열 크기가 다를 경우에도 연산 지원
+print("=" * 7, "브로드 캐스팅 연산", "="*7)
+aa = np.array([1,2,3]) # 1행 3열
+bb = np.array([[4],[5],[6]]) # 3행 1열
+
+cc = aa + bb
+print(cc)
